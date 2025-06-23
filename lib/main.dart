@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order_app/features/onboarding/onboardingscreen1.dart';
 import 'package:food_order_app/features/onboarding/onboardingscreen3.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Onboardingscreen3()
+      home: const Onboardingscreen1()
     );
   }
 }
