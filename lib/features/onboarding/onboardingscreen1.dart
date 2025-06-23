@@ -26,7 +26,7 @@ class _Onboardingscreen1State extends State<Onboardingscreen1> {
             SizedBox(height: 30),
 
             /// Image or custom widget
-             const GemBadgeWidget(backgroundImagePath: "assets\images\bac.png", overlayImagePath: "assets\images\Foods3.png"),
+             const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/Foods3.png"),
 
             SizedBox(height: 30),
 

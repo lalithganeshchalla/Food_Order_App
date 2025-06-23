@@ -22,7 +22,7 @@ class _Onboardingscreen3State extends State<Onboardingscreen3> {
           
           children: [
             SizedBox(height: 30),
-            const GemBadgeWidget(backgroundImagePath: "assets\images\bac.png", overlayImagePath: "assets\images\dim.png")
+            const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/dim.png")
           ]
 
       ),
