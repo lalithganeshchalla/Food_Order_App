@@ -29,7 +29,7 @@ class GemBadgeWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
         
-                SizedBox(height: 70), // Add some space between the images
+                SizedBox(height: 85), // Add some space between the images
                Image.asset("assets/images/dim.png",
                   width: 400,
                   height: 300,
