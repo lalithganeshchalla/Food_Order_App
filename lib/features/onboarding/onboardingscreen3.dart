@@ -4,8 +4,7 @@ import 'package:food_order_app/widgets/title_and_subtitle.dart';
 import 'package:food_order_app/widgets/DotIndicators.dart'; // custom dot indicator widget
 
 class Onboardingscreen3 extends StatelessWidget {
-  const Onboardingscreen3({Key? key}) : super(key: key);
-
+  Onboardingscreen3({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // Dummy controller for DotIndicator just to render dots (currentIndex = 2)
@@ -26,7 +25,11 @@ class Onboardingscreen3 extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 30),
-            const GemBadgeWidget(),
+
+            const GemBadgeWidget(
+              backgroundImagePath: 'assets/images/bac.png',
+              overlayImagePath: 'assets/images/dim.png',
+            ),
             const SizedBox(height: 50),
             Card(
               color: Colors.white,
@@ -58,7 +61,6 @@ class Onboardingscreen3 extends StatelessWidget {
               child: const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 30),
             ),
             const SizedBox(height: 30),
-            // You can use a static widget here too
             DotIndicator(controller: dummyController, count: 3),
           ],
         ),

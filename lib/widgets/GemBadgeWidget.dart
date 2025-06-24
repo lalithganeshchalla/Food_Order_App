@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class GemBadgeWidget extends StatelessWidget {
-  const GemBadgeWidget({Key? key}) : super(key: key);
+  final String backgroundImagePath;
+  final String overlayImagePath;
+
+  const GemBadgeWidget({
+    Key? key,
+    required this.backgroundImagePath,
+    required this.overlayImagePath,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +23,8 @@ class GemBadgeWidget extends StatelessWidget {
               shape: BoxShape.circle,
               color: const Color.fromARGB(83, 255, 77, 41),
               image: DecorationImage(
-                image: AssetImage('assets/images/bac.png'),
+                image: AssetImage(backgroundImagePath),
                 fit: BoxFit.none,
-
-                
               ),
             ),
           ),
@@ -30,16 +35,14 @@ class GemBadgeWidget extends StatelessWidget {
               children: [
         
                 SizedBox(height: 85), // Add some space between the images
-               Image.asset("assets/images/dim.png",
+               Image.asset(overlayImagePath,
                   width: 400,
                   height: 300,
                 ),
-               
               ],
             ),
           ),
         ],
       ),
     );
-  }
-}
+  }}
