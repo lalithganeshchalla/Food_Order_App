@@ -24,46 +24,11 @@ class Onboardingscreen3 extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(height: 30),
+            SizedBox(height: 30),
+            const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/dim.png")
+          ]
 
-            const GemBadgeWidget(
-              backgroundImagePath: 'assets/images/bac.png',
-              overlayImagePath: 'assets/images/dim.png',
-            ),
-            const SizedBox(height: 50),
-            Card(
-              color: Colors.white,
-              margin: const EdgeInsets.symmetric(horizontal: 30),
-              elevation: 10,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(20.0),
-                child: TitleAndSubtitle(
-                  title1: 'Level Up',
-                  title2: 'With Every Order',
-                  subtitle:
-                      'Silver, Gold, and Platinum tiers give you exclusive perks. The more you order, the better the rewards!',
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 252, 64, 31),
-                shape: const CircleBorder(),
-                padding: const EdgeInsets.all(16),
-              ),
-              child: const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 30),
-            ),
-            const SizedBox(height: 30),
-            DotIndicator(controller: dummyController, count: 3),
-          ],
-        ),
+      ),
       ),
     );
   }
