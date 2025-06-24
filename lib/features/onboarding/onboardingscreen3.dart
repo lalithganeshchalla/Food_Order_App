@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:food_order_app/widgets/DotIndicators.dart';
 import 'package:food_order_app/widgets/GemBadgeWidget.dart';
-import 'package:food_order_app/widgets/title_and_subtitle.dart';
-import 'package:food_order_app/widgets/DotIndicators.dart'; // custom dot indicator widget
 
 class Onboardingscreen3 extends StatelessWidget {
   Onboardingscreen3({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // Dummy controller for DotIndicator just to render dots (currentIndex = 2)
     final PageController dummyController = PageController(initialPage: 2);
 
     return Scaffold(
@@ -25,7 +23,65 @@ class Onboardingscreen3 extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 30),
-            const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/dim.png")
+            const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/dim.png"),
+             SizedBox(height: 30),
+
+            /// Welcome Text Container
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Container(
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 8,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      'Level Up',
+                      style:
+                          TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'With Every Order.',
+                      style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.deepOrange,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Silver, Gold, and Platinum tiers give you exclusive perks. The more you order, the better the rewards!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 18, color: Colors.black54),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 40),
+            FloatingActionButton(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              onPressed: () {
+                // Next screen logic here
+              },
+              backgroundColor: Colors.deepOrange,
+              child: Icon(Icons.arrow_forward, color: Colors.white),
+              
+            ),
+            SizedBox(height: 20),
+            DotIndicator(controller: dummyController, count: 3)
           ]
 
       ),

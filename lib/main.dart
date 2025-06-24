@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Onboardingscreen1()
+      // home: const Onboardingscreen1(),
+      // home: Onboardingscreen3()
+      home: const SignUpView(),
     );
   }
 }

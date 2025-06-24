@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:food_order_app/widgets/DotIndicators.dart';
 import 'package:food_order_app/widgets/GemBadgeWidget.dart';
 
 class Onboardingscreen1 extends StatefulWidget {
@@ -10,6 +11,7 @@ class Onboardingscreen1 extends StatefulWidget {
 }
 
 class _Onboardingscreen1State extends State<Onboardingscreen1> {
+  final PageController dummyController = PageController(initialPage: 0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +26,7 @@ class _Onboardingscreen1State extends State<Onboardingscreen1> {
         child: Column(
           children: [
             SizedBox(height: 30),
-            const GemBadgeWidget(backgroundImagePath: "assets\images\bac.png", overlayImagePath: "assets\images\Foods3.png"), // Make sure you define this
+            const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/Foods3.png"), // Make sure you define this
             SizedBox(height: 30),
 
             /// Welcome Text Container
@@ -48,17 +50,17 @@ class _Onboardingscreen1State extends State<Onboardingscreen1> {
                     Text(
                       'Welcome to',
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       'Craft My Plate.',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Colors.deepOrange,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 18),
                     Text(
                       'Craft My Plate’s exclusive rewards program – made for foodies who love to host.',
                       textAlign: TextAlign.center,
@@ -71,20 +73,6 @@ class _Onboardingscreen1State extends State<Onboardingscreen1> {
 
             SizedBox(height: 40),
 
-            /// Navigation Dots
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.circle, size: 10, color: Colors.deepOrange),
-                SizedBox(width: 5),
-                Icon(Icons.circle_outlined, size: 10, color: Colors.deepOrange),
-                SizedBox(width: 5),
-                Icon(Icons.circle_outlined, size: 10, color: Colors.deepOrange),
-              ],
-            ),
-
-            SizedBox(height: 20),
-
             /// Next Button
             FloatingActionButton(
               onPressed: () {
@@ -94,6 +82,8 @@ class _Onboardingscreen1State extends State<Onboardingscreen1> {
               child: Icon(Icons.arrow_forward, color: Colors.white),
             ),
             SizedBox(height: 20),
+            DotIndicator(controller: dummyController, count: 3)
+
           ],
         ),
       ),
