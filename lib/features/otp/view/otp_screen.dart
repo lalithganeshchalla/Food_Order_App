@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import '../view_model/otp_viewmodel.dart';
@@ -61,8 +60,8 @@ class _OtpScreenState extends State<OtpScreen> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: success
-                  ? [Color(0xFFE8F5E9), Color(0xFF43A047)] // green success
-                  : [Color(0xFFFFEBEE), Color(0xFFE53935)], // red error
+                  ? [Color(0xFFE8F5E9), Color(0xFF43A047)]
+                  : [Color(0xFFFFEBEE), Color(0xFFE53935)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
