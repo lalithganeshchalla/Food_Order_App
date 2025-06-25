@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const Onboardingscreen1(),
       // home: Onboardingscreen3()
-      home: const SignUpView(),
+      home: const SignUpView()
     );
   }
 }
