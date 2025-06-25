@@ -112,11 +112,8 @@ class _OtpScreenState extends State<OtpScreen> {
       ),
     );
   }
-
   @override
   Widget build(BuildContext context) {
-    // final size = MediaQuery.of(context).size;
-
     return ChangeNotifierProvider(
       create: (_) => OTPViewModel(),
       child: Scaffold(
@@ -327,7 +324,7 @@ class _OtpScreenState extends State<OtpScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(height: 40),
+                        const SizedBox(height: 30),
                         TextButton(
                           onPressed: () {},
                           child: const Text.rich(
