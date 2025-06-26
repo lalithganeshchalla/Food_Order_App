@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order_app/features/sign_up/view/sign_up_view.dart';
 import 'package:food_order_app/widgets/DotIndicators.dart';
 import 'package:food_order_app/widgets/GemBadgeWidget.dart';
 
@@ -22,9 +23,9 @@ class Onboardingscreen3 extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             const GemBadgeWidget(backgroundImagePath: "assets/images/bac.png", overlayImagePath: "assets/images/dim.png"),
-             SizedBox(height: 30),
+             SizedBox(height: 20),
 
             /// Welcome Text Container
             Padding(
@@ -68,13 +69,13 @@ class Onboardingscreen3 extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 40),
+            SizedBox(height: 20),
             FloatingActionButton(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
               onPressed: () {
-                // Next screen logic here
+               Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpView()));
               },
               backgroundColor: Colors.deepOrange,
               child: Icon(Icons.arrow_forward, color: Colors.white),

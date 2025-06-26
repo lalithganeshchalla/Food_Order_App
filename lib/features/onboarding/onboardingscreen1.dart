@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:food_order_app/features/onboarding/onboardingscreen2.dart';
 import 'package:food_order_app/widgets/DotIndicators.dart';
 import 'package:food_order_app/widgets/GemBadgeWidget.dart';
 
@@ -76,7 +77,7 @@ class _Onboardingscreen1State extends State<Onboardingscreen1> {
             /// Next Button
             FloatingActionButton(
               onPressed: () {
-                // Next screen logic here
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Onboardingscreen2()));
               },
               backgroundColor: Colors.deepOrange,
               child: Icon(Icons.arrow_forward, color: Colors.white),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_order_app/features/onboarding/onboardingscreen1.dart';
+import 'package:food_order_app/features/onboarding/onboardingscreen2.dart';
 import 'package:food_order_app/features/onboarding/onboardingscreen3.dart';
 import 'package:food_order_app/features/otp/view/otp_screen.dart';
 import 'package:food_order_app/features/sign_up/view/sign_up_view.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       // home: const Onboardingscreen1(),
       // home: Onboardingscreen3()
       // home: const SignUpView(),
-       home: const OtpScreen()
+       home: Onboardingscreen2()
     );
   }
 }
